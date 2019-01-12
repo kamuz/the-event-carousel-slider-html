@@ -11,4 +11,13 @@ $(document).ready(function() {
         nextText: "",
         slideMargin: 15
     });
+    
+    $('.slider-wrap').hide();
+    $('.slider-wrap:first-child').show();
+    $('.vertical div a.event-item').click(function(e){
+        e.preventDefault();
+        var eventId = $(this).data('event-id');
+        $('.slider-wrap').hide();
+        $('#slider-' + eventId).show();
+    });
 });
